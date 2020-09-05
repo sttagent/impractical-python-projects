@@ -1,9 +1,9 @@
-key = {}
 
 
 def main():
+    key = {}
     print("Enter route cipher key. Press Enter"
-          "r without answer to quit.")
+          " without answer to quit.")
     while True:
         column = input("Column number: ")
         if not column:
