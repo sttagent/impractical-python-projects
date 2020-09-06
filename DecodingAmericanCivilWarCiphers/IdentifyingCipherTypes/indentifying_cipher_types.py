@@ -40,7 +40,7 @@ def load_cipher_from_file(file):
 def get_relative_frequency(letter_counter, cipher_length):
     letter_frequency = {}
     for letter, number in letter_counter.items():
-        # What percent of how many time a letter appeards compared to total
+        # the percent of how many times a letter appears compared to total
         # number of letters
         letter_frequency[letter] = (number / cipher_length) * 100
 
