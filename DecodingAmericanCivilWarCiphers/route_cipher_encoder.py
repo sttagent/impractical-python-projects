@@ -36,7 +36,7 @@ def main():
 
 def encode_message():
     word_list = MESSAGE.upper().split()
-    word_list = delete_punctuation(word_list)
+    delete_punctuation(word_list)
     substitute_code_words(word_list)
     columns, rows = calculate_columns_and_rows(word_list)
     word_matrix = [[None] * columns for i in range(1, rows + 1)]
@@ -93,11 +93,9 @@ def calculate_columns_and_rows(word_list):
 
 
 def delete_punctuation(word_list):
-    tmp_word_list = []
     punctuation = ',.!?:;'
-    for word in word_list:
-        tmp_word_list.append(word.rstrip(punctuation))
-    return tmp_word_list
+    for i in range(len(word_list)):
+        word_list[i] = word_list[i].rstrip(punctuation)
 
 
 
